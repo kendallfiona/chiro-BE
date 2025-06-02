@@ -1,0 +1,12 @@
+{
+  "name": "auth-lambda",
+  "version": "1.0.0",
+  "description": "Authentication Lambda for weather app",
+  "main": "app.js",
+  "dependencies": {
+    "jsonwebtoken": "^9.0.2",
+    "bcryptjs": "^2.4.3",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/bcryptjs": "^2.4.6"
+  }
+} 

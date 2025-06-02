@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "john.doe",
+      "password": "J0hn@2024",
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": 2,
+      "username": "sarah.smith",
+      "password": "S@rah2024!",
+      "firstName": "Sarah",
+      "lastName": "Smith"
+    },
+    {
+      "id": 3,
+      "username": "michael.brown",
+      "password": "M1ch@el#2024",
+      "firstName": "Michael",
+      "lastName": "Brown"
+    },
+    {
+      "id": 4,
+      "username": "emma.wilson",
+      "password": "Emm@2024$",
+      "firstName": "Emma",
+      "lastName": "Wilson"
+    },
+    {
+      "id": 5,
+      "username": "david.jones",
+      "password": "D@vid2024%",
+      "firstName": "David",
+      "lastName": "Jones"
+    },
+    {
+      "id": 6,
+      "username": "lisa.taylor",
+      "password": "L1s@2024^",
+      "firstName": "Lisa",
+      "lastName": "Taylor"
+    },
+    {
+      "id": 7,
+      "username": "robert.garcia",
+      "password": "R0b@2024&",
+      "firstName": "Robert",
+      "lastName": "Garcia"
+    },
+    {
+      "id": 8,
+      "username": "anna.martinez",
+      "password": "Ann@2024*",
+      "firstName": "Anna",
+      "lastName": "Martinez"
+    },
+    {
+      "id": 9,
+      "username": "james.anderson",
+      "password": "J@mes2024+",
+      "firstName": "James",
+      "lastName": "Anderson"
+    },
+    {
+      "id": 10,
+      "username": "olivia.thomas",
+      "password": "0l1v1@2024+",
+      "firstName": "Olivia",
+      "lastName": "Thomas"
+    },
+    {
+      "id": 10,
+      "username": "kendall.fiona",
+      "password": "hello123",
+      "firstName": "Kendall",
+      "lastName": "Fiona"
+    }
+  ]
+}
