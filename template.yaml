@@ -41,6 +41,36 @@ Resources:
         External:
           - aws-sdk
 
+  SuggestionsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.handler
+      Runtime: nodejs20.x
+      CodeUri: src/suggestions/
+      Environment:
+        Variables:
+          GEONAMES_USERNAME: "your_geonames_username"
+          JWT_SECRET: "your_jwt_secret"
+      Events:
+        SuggestionsApi:
+          Type: Api
+          Properties:
+            Path: /city/suggestions
+            Method: GET
+            RestApiId: !Ref TestApi
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "node20"
+        EntryPoints:
+          - app.ts
+        Format: cjs
+        Bundle: true
+        External:
+          - aws-sdk
+
+
 Outputs:
   TestApiEndpoint:
     Description: API Gateway endpoint URL
