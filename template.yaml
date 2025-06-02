@@ -1,0 +1,47 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: weather-backend
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  TestApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      Cors:
+        AllowMethods: "'GET,POST,OPTIONS'"
+        AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+        AllowOrigin: "'*'"
+
+  WeatherFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.handler
+      Runtime: nodejs20.x
+      CodeUri: src/weather/
+      Environment:
+        Variables:
+          OPENWEATHER_API_KEY: "your_open_weather_api_key"
+          JWT_SECRET: "your_jwt_secret"
+      Events:
+        WeatherApi:
+          Type: Api
+          Properties:
+            Path: /weather
+            Method: GET
+            RestApiId: !Ref TestApi
+    Metadata:
+      BuildMethod: esbuild
+      BuildProperties:
+        Minify: true
+        Target: "node20"
+        EntryPoints:
+          - app.ts
+        Format: cjs
+        Bundle: true
+        External:
+          - aws-sdk
+
+Outputs:
+  TestApiEndpoint:
+    Description: API Gateway endpoint URL
+    Value: !Sub "https://${TestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/test"
