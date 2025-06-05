@@ -65,13 +65,7 @@ To run the test suite:
 ```bash
 # Run all tests
 npm test
-
-### Test Environment
-
-The tests use a separate test environment configuration:
-- Environment variables are loaded from `.env` file
-- JWT tokens are generated using the configured `JWT_SECRET`
-- Mock responses are used for external API calls
+```
 
 ## API Endpoints
 
