@@ -54,6 +54,25 @@ To run the application locally:
 sam local start-api -p 3000
 ```
 
+## Testing
+
+The application includes test suites for all major components. Tests are written using Jest and are located in the `__tests__` directory.
+
+### Running Tests
+
+To run the test suite:
+
+```bash
+# Run all tests
+npm test
+
+### Test Environment
+
+The tests use a separate test environment configuration:
+- Environment variables are loaded from `.env` file
+- JWT tokens are generated using the configured `JWT_SECRET`
+- Mock responses are used for external API calls
+
 ## API Endpoints
 
 ### Weather
